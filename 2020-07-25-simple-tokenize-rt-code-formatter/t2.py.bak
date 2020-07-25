@@ -1,0 +1,48 @@
+def foo(*args):
+    pass
+
+
+foo(
+    {
+        'foo': 'bar',
+    },
+)
+
+foo({
+    'foo': 'bar',
+})
+
+
+foo(
+    [
+        1, 2, 3,
+    ]
+)
+
+foo([
+    1, 2, 3
+])
+
+
+foo(
+    (
+        1, 2, 3,
+    )
+)
+
+foo((
+    1, 2, 3,
+))
+
+
+foo(
+    {
+        1, 2, 3,
+    }
+)
+
+foo({
+    1, 2, 3,
+})
+
+# TODO: dictcomp, setcomp, listcomp
