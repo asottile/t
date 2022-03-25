@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import argparse
 import ast
 import sys
@@ -36,7 +38,7 @@ def ast_parse(contents_text: str) -> ast.Module:
 
 class Visitor(ast.NodeVisitor):
     def __init__(self) -> None:
-        self.calls: Set[Offset] = set()
+        self.calls: set[Offset] = set()
 
     def visit_Call(self, node: ast.Call) -> None:
         if (
@@ -135,7 +137,7 @@ def _fix_file(filename: str) -> int:
     return contents_text != contents_text_orig
 
 
-def main(argv: Optional[Sequence[str]] = None) -> int:
+def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument('filenames', nargs='*')
     args = parser.parse_args(argv)

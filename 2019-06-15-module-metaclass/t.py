@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+
 class mcs(type):
     def __new__(cls, name, bases, dct):
         dct['__module__'] = 'pytest'

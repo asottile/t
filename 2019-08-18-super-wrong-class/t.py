@@ -1,7 +1,9 @@
+from __future__ import annotations
+
 import sys
 
 
-class A(object):
+class A:
     def fn(self):
         print('FROM A!')
 
@@ -13,7 +15,7 @@ class B(A):
 
 class C(B):
     def fn_super_C(self):
-        return super(C, self).fn()
+        return super().fn()
 
     def fn_super_B(self):
         return super(B, self).fn()
@@ -26,8 +28,7 @@ def main():
     c = C()
     c.fn_super_C()
     c.fn_super_B()
-    if sys.version_info > (3,):
-        c.fn_super_py3()
+    c.fn_super_py3()
 
 
 if __name__ == '__main__':

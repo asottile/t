@@ -1,10 +1,12 @@
+from __future__ import annotations
+
+
 async def f():
     for x in [3, 4, 5]:
         yield x
 
     def g():
-        for x in [1, 2, 3]:
-            yield x
+        yield from [1, 2, 3]
 
     for x in [3, 4, 5]:
         yield x

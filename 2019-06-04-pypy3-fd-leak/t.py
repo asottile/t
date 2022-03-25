@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import io
 import warnings
 
@@ -7,7 +9,7 @@ import pytest
 def test():
     for _ in range(15000):
         with pytest.raises(IsADirectoryError):
-            with io.open('.'):
+            with open('.'):
                 pass
 
 
@@ -18,7 +20,7 @@ with warnings.catch_warnings(record=True) as wrns:
 
 if len(wrns):
     print('*' * 79)
-    print('warnings: {}'.format(len(wrns)))
+    print(f'warnings: {len(wrns)}')
     print('first warning:')
-    print('{}:{}:{}'.format(wrns[0].filename, wrns[0].lineno, wrns[0].message))
+    print(f'{wrns[0].filename}:{wrns[0].lineno}:{wrns[0].message}')
     print('*' * 79)

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import curses
 import unicodedata
 
@@ -15,7 +17,7 @@ def wcwidth(c: str) -> int:
     return x
 
 
-def c_main(stdscr: 'curses._CursesWindow') -> None:
+def c_main(stdscr: curses._CursesWindow) -> None:
     stdscr.addstr(1, 0, 'C\tWIDTH\tNAME')
     stdscr.addstr(2, 0, '====================================')
     for i, c in enumerate(CHARS):

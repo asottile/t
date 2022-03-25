@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import ast
 import sys
 from typing import List
@@ -6,9 +8,9 @@ from typing import Union
 
 class Visitor(ast.NodeVisitor):
     def __init__(self) -> None:
-        self.locs: List[int] = []
+        self.locs: list[int] = []
 
-    def _visit_has_else(self, node: Union[ast.For, ast.While]) -> None:
+    def _visit_has_else(self, node: ast.For | ast.While) -> None:
         if node.orelse:
             self.locs.append(node.lineno)
         self.generic_visit(node)
