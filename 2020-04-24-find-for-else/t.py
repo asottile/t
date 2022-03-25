@@ -2,8 +2,6 @@ from __future__ import annotations
 
 import ast
 import sys
-from typing import List
-from typing import Union
 
 
 class Visitor(ast.NodeVisitor):

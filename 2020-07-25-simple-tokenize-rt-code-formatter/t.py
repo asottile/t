@@ -5,9 +5,7 @@ import ast
 import sys
 import tokenize
 import warnings
-from typing import Optional
 from typing import Sequence
-from typing import Set
 
 from tokenize_rt import ESCAPED_NL
 from tokenize_rt import Offset

@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-import sys
-
 
 class A:
     def fn(self):
