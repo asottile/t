@@ -7,7 +7,7 @@ repos:
     -   id: check-yaml
     -   id: double-quote-string-fixer
 -   repo: https://github.com/asottile/pyupgrade
-    rev: v2.37.2
+    rev: v2.37.3
     hooks:
     -   id: pyupgrade
 -   repo: https://github.com/asottile/add-trailing-comma
@@ -19,6 +19,6 @@ repos:
     hooks:
     -   id: reorder-python-imports
 -   repo: https://github.com/PyCQA/flake8
-    rev: 4.0.1
+    rev: 5.0.3
     hooks:
     -   id: flake8
