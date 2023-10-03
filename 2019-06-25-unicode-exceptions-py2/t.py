@@ -4,7 +4,7 @@ PY2 = str is bytes
 
 
 def f():
-    raise Exception(u'\u2603')
+    raise Exception('\u2603')
 
 
 class MyTest(unittest.TestCase):
@@ -13,7 +13,7 @@ class MyTest(unittest.TestCase):
             assert_raises_regex = self.assertRaisesRegexp
         else:
             assert_raises_regex = self.assertRaisesRegex
-        assert_raises_regex(Exception, u'\u2603', f)
+        assert_raises_regex(Exception, '\u2603', f)
 
 
 if __name__ == '__main__':

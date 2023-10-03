@@ -3,8 +3,7 @@ async def f():
         yield x
 
     def g():
-        for x in [1, 2, 3]:
-            yield x
+        yield from [1, 2, 3]
 
     for x in [3, 4, 5]:
         yield x

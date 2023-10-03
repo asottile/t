@@ -7,7 +7,7 @@ import pytest
 def test():
     for _ in range(15000):
         with pytest.raises(IsADirectoryError):
-            with io.open('.'):
+            with open('.'):
                 pass
 
 
