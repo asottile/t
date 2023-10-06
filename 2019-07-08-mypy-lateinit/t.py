@@ -3,7 +3,7 @@ from typing import Optional
 
 class C:
     def __init__(self) -> None:
-        self.x = None  # type: Optional[int]
+        self.x: Optional[int] = None
 
     def set_x(self, x: int) -> None:
         self.x = x
